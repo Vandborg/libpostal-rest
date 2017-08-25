@@ -67,6 +67,8 @@ func HealthHandler(w http.ResponseWriter, r *http.Request) {
 func ExpandHandler(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 
+	fmt.Printf("Server request on /expand")
+
 	var req Request
 
 	q, _ := ioutil.ReadAll(r.Body)
@@ -80,6 +82,8 @@ func ExpandHandler(w http.ResponseWriter, r *http.Request) {
 
 func ParserHandler(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
+
+	fmt.Printf("Server request on /parser")
 
 	var req Request
 
