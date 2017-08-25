@@ -44,7 +44,7 @@ func main() {
 			fmt.Printf("listening on https://%s\n", listenSpec)
 			s.ListenAndServeTLS(certFile, keyFile)
 		} else {
-			fmt.Printf("listening on http://%s\n", listenSpec)
+			fmt.Printf("updated listening on http://%s\n", listenSpec)
 			s.ListenAndServe()
 		}
 	}()
